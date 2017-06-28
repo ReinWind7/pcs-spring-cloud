@@ -1,0 +1,50 @@
+version: '2'
+services:
+  cps-spring-cloud-eureka:
+    image: cps-spring-cloud-eureka
+    restart: always
+    ports:
+        8761:8761
+
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+  cps_user:
+    build: cps_user
+    image: cps_user
+    restart: always
+    ports:
+        8080:8080
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+  cps_photo:
+    build: cps_photo
+    image: cps_photo
+    environment:
+      CONFIG_SERVICE_PASSWORD: admin
+    restart: always
+    depends_on: [config]
+    ports:
+        8081:8081
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+  cps_comment:
+    build: cps_comment
+    image: cps_comment
+    restart: always
+    ports:
+       8082:8082
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+
