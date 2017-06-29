@@ -1,0 +1,14 @@
+com\ldeng\backend\dao\PhotoDao.class
+com\ldeng\backend\service\CommentService.class
+com\ldeng\backend\model\Comment.class
+com\ldeng\backend\controller\PhotoController.class
+com\ldeng\backend\service\impl\CommentServiceImpl.class
+com\ldeng\backend\config\CorsConfig.class
+com\ldeng\backend\config\JwtFilter.class
+com\ldeng\backend\dao\CommentDao.class
+com\ldeng\backend\model\User.class
+com\ldeng\backend\service\impl\PhotoServiceImpl.class
+com\ldeng\backend\controller\PhotoResource.class
+com\ldeng\backend\model\Photo.class
+com\ldeng\backend\service\PhotoService.class
+com\ldeng\backend\PhotoApplication.class

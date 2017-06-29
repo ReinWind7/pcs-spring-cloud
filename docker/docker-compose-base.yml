@@ -1,0 +1,36 @@
+version: '2'
+services:
+  cps_user:
+    build: cps_user
+    image: cps_user
+    restart: always
+    ports:
+        8080:8080
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+  cps_photo:
+    build: cps_photo
+    image: cps_photo
+    restart: always
+    ports:
+        8081:8081
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+  cps_comment:
+    build: cps_comment
+    image: cps_comment
+    restart: always
+    ports:
+       8082:8082
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+
